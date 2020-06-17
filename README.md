@@ -70,7 +70,7 @@ Build for production.
 $ npm run build
 ```
 
-## Deploy
+## Deploy: Currently no working
 
 Deploy to `gh-pages` branch on GitHub.
 
