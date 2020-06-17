@@ -97,6 +97,9 @@ footer {
 	padding-bottom:30px;
 	a {
 		color: $font-grey;
+		&:hover {
+			color: $font-grey;
+		}
 	}
 }
 
