@@ -39,6 +39,19 @@ const config = {
         ],
       },
       {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              limit: 8192,
+              name: '[name].[ext]',
+              outputPath: 'public/fonts',
+            },
+          },
+        ],
+      },
+      {
         test: /\.(gif|png|jpe?g|svg)$/i,
         use: [
           {

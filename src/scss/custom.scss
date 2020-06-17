@@ -1,3 +1,102 @@
-@import './carousel.css';
 
-// Your customize CSS
+/**/
+@font-face {
+  font-family:'ThreeSix10Pro-Medium';
+  src:url('../public/fonts/ThreeSix10Pro-090Medi.eot'); 
+  src:url('../public/fonts/ThreeSix10Pro-090Medi.eot?#iefix') format('embedded-opentype'), 
+       url('../public/fonts/ThreeSix10Pro-090Medi.woff2') format('woff2'), 
+       url('../public/fonts/ThreeSix10Pro-090Medi.woff') format('woff'), 
+       url('../public/fonts/ThreeSix10Pro-090Medi.ttf')  format('truetype'), 
+       url('../public/fonts/ThreeSix10Pro-090Medi.svg') format('svg'); 
+}
+
+$font-medium: ThreeSix10Pro-Medium, sans-serif;
+/**/
+$grey: #F0EEEB;
+$font-grey: #70634A;
+$font-grey-small: #9B9281;
+
+
+body { 
+
+	-webkit-font-smoothing: antialiased; 
+	-moz-osx-font-smoothing: grayscale; 
+
+	font-family: $font-medium;
+	font-size: 18px;
+	line-height: 20px;
+	color: white;
+	text-align: left;
+
+}
+h1,h2 {
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: bold;
+	margin:0;
+}
+.small {
+	font-size: 15px;
+	line-height: 15px;
+	color: $font-grey-small;
+}
+
+.navbar {
+    padding: 30px;
+    .navbar-brand {
+	    img {
+	    	height:100px;
+	    }
+	}
+}
+
+.featurette {
+	position:relative;
+	//padding-top: 56.25%;
+	padding:0;
+	overflow: hidden;
+	height:100vh;
+
+	
+	img {
+		position: absolute;
+		z-index: 1;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+		max-width: none;
+		max-height: none;
+	}
+	&-info {
+		position: absolute;
+		z-index: 2;
+		font-size: 50px;
+		line-height: 40px;
+		bottom:30px;
+		left:30px;
+
+	}
+	&-divider {
+	  margin: 0; /* Space out the Bootstrap <hr> more */
+	}
+
+	/* Thin out the marketing headings */
+	&-heading {
+	  font-weight: 300;
+	  line-height: 1;
+	  letter-spacing: -0.05rem;
+	}
+}
+
+footer {
+	color: $font-grey;
+	background-color: $grey;
+	padding-top:30px;
+	padding-bottom:30px;
+	a {
+		color: $font-grey;
+	}
+}
+
