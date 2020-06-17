@@ -1,6 +1,6 @@
-# Boostrap + Webpack + JQuery Boilerplate
+# Enter Projects holding Page
 
-> Build landing page with **Boostrap** and **jQuery** is so easy.
+> Based on https://github.com/homerchen19/bootstrap-webpack-jquery-boilerplate
 
 <a target="_blank" href="https://opensource.org/licenses/MIT" title="License: MIT">
   <img src="https://img.shields.io/badge/License-MIT-blue.svg">
@@ -10,47 +10,14 @@
 </a>
 <a target="_blank" href="http://makeapullrequest.com" title="PRs Welcome"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"></a>
 
-## Why ?
-
-React is awesome, and I use it everyday.
-
-However, not each project needs such a complicated library. jQuery and bootstrap are good enough.
-
-Hence, this repo is suitable for simple projects.
-
-## About DOM manipulation, all you need is...
-
-#### 🤩 jQuery
-
-#### ❌ No React
-
-#### ❌ No Vue
-
-#### ❌ No Angular
-
-## About CSS, all you need is...
-
-#### 🤩 Bootstrap + CSS
-
-#### ❌ No CSS Modules
-
-#### ❌ No styled-components
-
-## Features
-
-- **Bootstrap** and **jQuery** installed
-- Hot Module Replacement (**HMR**)
-- Support **ES6** Syntax (**Babel 7**)
-- **ESLint** + **Prettier** = **Neat Coding Style**
-- Webpack production building (**code splitting**, **cache**, **lazy-loading** and [**Terser**](https://github.com/terser-js/terser))
 
 ## Download and Install
 
 Let's go!
 
 ```
-$ git clone https://github.com/xxhomey19/bootstrap-webpack-jquery-boilerplate.git
-$ cd bootstrap-webpack-jquery-boilerplate
+$ git clone https://github.com/pablorica/enterprojects.git
+$ cd enterprojects
 $ yarn // or npm install
 ```
 
@@ -83,3 +50,4 @@ $ npm run deploy
 ## License
 
 MIT © [xxhomey19](https://github.com/xxhomey19)
+
