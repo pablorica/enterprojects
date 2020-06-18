@@ -92,6 +92,14 @@ h1,h2 {
 	  letter-spacing: -0.05rem;
 	}
 }
+#FloatingMessage {
+	font-size: 18px;
+	line-height: 20px;
+	position:absolute;
+	z-index:10;
+	bottom:150px;
+	left:30px;
+}
 
 footer {
 	color: $font-grey;
