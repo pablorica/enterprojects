@@ -9,6 +9,20 @@
   .slick-slide {
     position: relative;
   }
+  .slide_left {
+    img {
+      object-position: 100% 0;
+      //top:0;
+      //right:0;
+    }
+  }
+  .slide_right {
+    img {
+      object-position: 0 0;
+      //top:0;
+      //left:0;
+    }
+  }
 
   &-caption {
     position: absolute;
