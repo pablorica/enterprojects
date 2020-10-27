@@ -1,0 +1,32 @@
+{
+  "name": "seadesign",
+  "version": "1.2.0",
+  "description": "A clean slate Wordpress theme template with Bootstrap(4) Sass.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "webpack --mode development",
+    "watch": "webpack --watch  --mode development",
+    "build": "webpack --mode production"
+  },
+  "keywords": [],
+  "author": "pablorica",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^1.0.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^7.3.1",
+    "style-loader": "^0.23.1",
+    "file-loader": "^6.0.0",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "popper.js": "^1.16.1"
+  }
+}

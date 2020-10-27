@@ -1,0 +1,96 @@
+html {
+  /* Disable scroll boucing *
+  height  : 100%;
+  overflow: hidden;
+  position: relative;
+  /**/
+}
+
+body { 
+    /* Disable scroll boucing *
+    height  : 100%;
+    overflow: auto;
+    position: relative;
+    /**/
+
+	-webkit-font-smoothing: antialiased; 
+	-moz-osx-font-smoothing: grayscale; 
+
+	font-family: $font-medium;
+	font-size: 20px;
+	line-height: 26px;
+	color: black;
+	text-align: left;
+    font-weight: 400;
+    @media screen and (min-width: 768px) {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+}
+
+a,a:hover,a:focus {
+    color: white;
+    text-decoration: underline;
+    font-weight: 400;
+}
+b, strong {
+	font-family: $font-bold;
+    font-weight: 400;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: $font-bold;
+    line-height: 1.2;
+    font-weight: 400;
+    a,a:hover,a:focus {
+    	text-decoration: none;
+    }
+}
+.h1, h1 {
+    font-size: 30px;
+	line-height: 40px;
+    @media screen and (min-width: 768px) {
+        font-size: 40px;
+        line-height: 50px;
+    }
+}
+
+.h2, h2, .h3, h3 {
+    font-size: 20px;
+    line-height: 26px;
+    @media screen and (min-width: 768px) {
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+.h3, h3 {
+    //font-family: $font-medium;
+}
+
+.h4, h4 {
+    font-family: $font-medium;
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 0;
+    @media screen and (min-width: 768px) {
+        font-size: 14px;
+        line-height: 1.2;
+    }
+}
+p:last-of-type {
+    margin-bottom: 0 !important;
+}
+
+
+
+
+.wrapper {
+    padding:0
+}
+
+
+
+
+
+
