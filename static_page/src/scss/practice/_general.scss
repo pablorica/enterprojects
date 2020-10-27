@@ -1,0 +1,57 @@
+
+.practice {
+	header {
+		position:relative;
+		
+		.navbar {
+    		position: fixed;
+    		transition: 200ms ease-in-out;
+    	}
+    	&.withheld {
+    		.navbar {
+	    		//position: relative;
+	    		transform: translateY(-100%);
+	    	}
+    	}
+	}
+  	
+  	main {
+  		background-color: $grey;
+  	}
+  	.section-void {
+  		min-height: 100vh;
+  	}
+	&-headline {
+	    .headline {
+	      padding:0;
+	      p:last-of-type {
+	        margin:0;
+	      }
+	    }
+	}
+}
+
+#animateFrames{
+	position:fixed;  
+	z-index:1;
+	.hero {
+  		position:relative;  
+  		.hero-image {
+  			position:fixed;
+	  		padding:0;
+	  		top:0;
+	  		left:0;
+	  		width:100vw;
+	  		height:100vh;
+  			img {
+		    	object-fit: contain;
+	    	}	
+	    	&.absolute {
+	    		position:absolute;
+	    		top:auto;
+	    		bottom: 50vh;
+	    		transformY: translate(50%);
+	    	}
+		}
+	}
+}

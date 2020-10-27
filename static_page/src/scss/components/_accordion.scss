@@ -1,0 +1,22 @@
+.collapse {
+	
+}
+[data-toggle="collapse"]{
+	.hide_collapsed {
+		display:inline-block;
+	}
+	.show_collapsed {
+		display:none;
+	}
+	&.collapsed {
+		.hide_collapsed {
+			display:none;
+		}
+		.show_collapsed {
+			display:inline-block;
+		}
+	}
+	&:hover > * {
+		text-decoration: underline
+	}
+}

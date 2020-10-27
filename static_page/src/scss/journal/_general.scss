@@ -1,0 +1,32 @@
+
+.journal {
+  &-sections {
+    padding-top:200px;
+    margin-bottom:200px
+  }
+    &-item__deprecated {
+    
+    padding-top:15px;
+    padding-bottom:15px;
+    position:relative;
+    &::before {
+      content:"";
+      position:absolute;
+      top:0;
+      left:30px;
+      width:calc(100% - 60px);
+      border-top:solid 2px $font-grey-title;
+      height:1px;
+    }
+  }
+  &-item {
+    margin-bottom:80px;
+    &--excerpt {
+      color: $font-smooth-grey;
+    }
+    small {
+      display: block;
+      margin-top:20px;
+    }
+  }
+}

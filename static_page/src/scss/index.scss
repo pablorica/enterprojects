@@ -1,0 +1,27 @@
+@import '../../node_modules/bootstrap/scss/bootstrap';
+@import '../slick/slick.css';
+
+@import './custom.scss';
+
+@import './components/header.scss';
+@import './components/splash.scss';
+@import './components/carousel.scss';
+@import './components/parallax.scss';
+@import './components/footer.scss';
+@import './components/cards.scss';
+@import './components/hero.scss';
+@import './components/meta.scss';
+@import './components/animation.scss';
+@import './components/accordion.scss';
+@import './components/form.scss';
+
+@import './sections/general.scss';
+
+@import './home/general.scss';
+
+@import './project/general.scss';
+@import './project/all.scss';
+
+@import './practice/general.scss';
+
+@import './journal/general.scss';

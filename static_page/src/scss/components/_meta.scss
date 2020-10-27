@@ -1,0 +1,12 @@
+.meta {
+	
+	&-title {
+	    margin: 0;
+	}
+	&-content {
+		color: $font-smooth-grey;
+		a {
+			color: $font-smooth-grey;
+		}
+	}
+}

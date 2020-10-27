@@ -1,0 +1,25 @@
+
+.all-projects {
+	header {
+		.navbar {
+			.subnavbar {
+				li {
+					a {
+						&.active, &:hover, &:focus {
+						    color: $font-grey-title;
+						}
+					}
+				}
+			}
+		}
+	}
+	.card {
+    	margin-bottom: 30px;
+		&-top {
+			.card-body {
+			    padding-top: 200px;
+			    margin-bottom: 40px;
+			}
+		}
+	}
+}
