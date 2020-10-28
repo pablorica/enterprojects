@@ -1,10 +1,9 @@
 <?php get_header(); ?>
-<main>
+<main id="<?php echo (get_field('fullpage_enable')?'fullpage':'nofullpage')?>">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8">
-				<!-- section -->
-				<section>
+
 
 					<h1 class="page-header"><?php the_title(); ?></h1>
 
@@ -36,8 +35,7 @@
 
 				<?php endif; ?>
 
-				</section>
-				<!-- /section -->
+
 			</div><!-- /.col-md-8 -->
 			<?php get_sidebar(); ?>
 		</div><!-- /.row -->

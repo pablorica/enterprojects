@@ -100,10 +100,15 @@ function codigo_display_html_video($videourl, $royalSlider=false) {
 	}
 	else {
 		if ($youtubeID) {
-			/*$html='<div id="youplayer_'.$youtubeID.'" class="youplayer" data-video-url="'.$youtubeID.'"></div>
+			/*$
+			<div id="youplayer_'.$youtubeID.'" class="youplayer" data-video-url="'.$youtubeID.'"></div>
 			<a class="start-video" data-video-id="'.$youtubeID.'"></a>
-			<a class="mute-video" data-video-id="'.$youtubeID.'" style="opacity:0"></a>';*/
-      $html='<iframe width="100%" height="600" data-url="https://www.youtube.com/embed/'.$youtubeID.'?showinfo=0&rel=0&enablejsapi=1" src="" frameborder="0" allowfullscreen></iframe>';
+			<a class="mute-video" data-video-id="'.$youtubeID.'" style="opacity:0"></a>
+			
+			<iframe width="100%" height="600" data-url="https://www.youtube.com/embed/'.$youtubeID.'?showinfo=0&rel=0&enablejsapi=1" src="" frameborder="0" allowfullscreen></iframe>
+			
+			*/
+	  $html='<iframe width="100%" height=100%" src="https://www.youtube.com/embed/'.$youtubeID.'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 		}
 		if ($vimeoID) {
 			$html='<iframe id="vimeoplayer" src="https://player.vimeo.com/video/'.$vimeoID.'?api=1&player_id=vimeoplayer" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>

@@ -23,7 +23,7 @@
 			<!-- header -->
 			<header class="header clear">
 
-                <nav class="navbar navbar-expand-sm fixed-top navbar-light bg-light">
+                <nav class="navbar navbar-expand-sm navbar-light bg-light">
                     <div class="container">
                     	
                         <!-- Your site title as branding in the menu -->
@@ -44,7 +44,7 @@
 							the_custom_logo();
 						} ?><!-- end custom logo -->
 
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <!-- The WordPress Menu goes here -->

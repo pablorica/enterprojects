@@ -24,16 +24,17 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 @import "theme/theme";
 
+
+// Blocks
+@import "blocks/general";
+@import "blocks/headline";
+@import "blocks/column";
+@import "blocks/gallery-row";
+
 // Partials
-//@import "partials/body";
-//@import "partials/wordpress";
-//@import "partials/utils";
-//@import "partials/wrapper";
-//@import "partials/header";
-//@import "partials/nav";
-//@import "partials/sidebar";
-//@import "partials/footer";
-//@import "partials/print";
+@import "partials/video";
+@import "partials/fullpage";
+@import "partials/carousel";
+@import "partials/footer";
 
 
-@import "theme/holdingpage/general";

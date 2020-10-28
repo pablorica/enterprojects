@@ -47,4 +47,3 @@ Based in https://github.com/tone4hook/wp-bootstrap4-sass
 ## License
 
 MIT
-
