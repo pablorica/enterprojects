@@ -40,4 +40,5 @@
 			<?php get_sidebar(); ?>
 		</div><!-- /.row -->
 	</div><!-- /.container -->
-<?php get_footer('full'); ?>
+</main>
+<?php get_footer(); ?>

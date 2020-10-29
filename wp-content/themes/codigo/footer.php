@@ -1,6 +1,6 @@
 		<?php get_template_part( 'footer-section' ); ?>
-	</div>
-	<!-- /#page -->
+
+	</div> <!-- /#page -->
 
 		<?php wp_footer(); ?>
 
