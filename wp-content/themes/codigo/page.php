@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main id="<?php echo (get_field('fullpage_enable')?'fullpage':'nofullpage')?>">
+<main id="<?php echo (get_field('fullpage_enable')?'fullpage':'nofullpage')?>" class="wrapper">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8">
@@ -40,5 +40,4 @@
 			<?php get_sidebar(); ?>
 		</div><!-- /.row -->
 	</div><!-- /.container -->
-</main>
-<?php get_footer(); ?>
+<?php get_footer('full'); ?>

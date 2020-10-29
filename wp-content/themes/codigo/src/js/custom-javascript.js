@@ -1,15 +1,9 @@
-/*
-scroll(0,0);
-// If URL has anchor, go to top right away
-if ( window.location.hash ) {
-	scroll(0,0);
-}
-// Remove some browsers issue
-setTimeout( function() { scroll(0,0); }, 1);
-*/
+// https://github.com/alvarotrigo/fullPage.js/wiki/Use-module-loaders-for-fullPage.js
+import IScroll from 'fullpage.js/vendors/scrolloverflow';
 
-//console.log('custom');
-
+//import fullpage from 'fullpage.js';
+import parallax from '../../fullpageparallax/fullpage.parallax.min';
+import fullpage from 'fullpage.js/dist/fullpage.extensions.min';
 
 
 
@@ -17,8 +11,57 @@ setTimeout( function() { scroll(0,0); }, 1);
 
 	/*'use strict';*/
 
-	var windowResized = false;
-	var expanded = false;
+	const fullParalaxOptions = {
+		//anchors: ['','','','','','','','','team'],
+		//anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage'],
+		//menu: '#menu',
+		scrollBar: false,
+		slidesNavigation: false,
+		scrollingSpeed: 1000,
+
+		licenseKey: '02EF1C6C-6EB14AD4-BADA0490-EBDF28DF',
+
+		scrollOverflow: true,
+		scrollOverflowReset: true,
+
+		parallax: true,
+		parallaxKey: 'Y29kaWdvLmNvLnVrX2wxS2NHRnlZV3hzWVhnPXJkNQ==', //see https://goo.gl/xkUmHS
+		parallaxOptions: {
+			type: 'reveal',
+			percentage: 62,
+			property: 'translate'
+		},
+		onLeave: function(origin, destination, direction){
+			var leaving = origin.item;
+			var arrival = destination.item;
+
+			if(direction =='down'){
+				$("nav.navbar").removeClass("scroll-up");
+				$("nav.navbar").addClass("scroll-down");
+			}
+	
+			if(direction == 'up'){
+				$("nav.navbar").addClass("scroll-up");
+				$("nav.navbar").removeClass("scroll-down");
+			}
+
+			//let arrClass = arrival.classList.value;
+			//var $ele = $(arrival);
+
+			//let arrColour = arrival.dataset.color;
+			//console.log(arrColour);
+
+			//if(origin.index == 0 && direction =='down'){
+				//alert("Going from section 0 to section 1");
+			//}
+			//if(origin.index == 1 && direction =='up'){
+				//alert("Going from section 1 to section 0");
+			//}
+
+			//if(direction == 'up' || direction =='down'){}
+			//if(origin.index == 1){}
+		}
+    }
 
 
 
@@ -250,6 +293,29 @@ setTimeout( function() { scroll(0,0); }, 1);
 
 			}
 		},
+
+
+		/* FullPage */
+		fullpage: function(){
+	    	if ($('#fullpage').length) {
+
+				$("nav.navbar").addClass("fixed-top");
+
+	        	var fullPageInstance = new fullpage('#fullpage',fullParalaxOptions);
+
+	        	$('#fullpage .moveScrollDown').on("click",function(){
+	        		//console.log('move down');
+	        		fullpage_api.moveSectionDown();
+				});
+
+	        	//fullpage_api.setAutoScrolling(false);
+
+	        	
+	      	}
+		},
+
+
+
 		/* Scroll */
 		scrollEffects: function() {
 
@@ -867,6 +933,7 @@ setTimeout( function() { scroll(0,0); }, 1);
 			
 			CDG.slickslider();
 
+			CDG.fullpage();
 			//CDG.scrollEffects();
 			//CDG.scrollWayPoint();
 			

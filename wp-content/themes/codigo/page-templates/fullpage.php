@@ -18,18 +18,11 @@ if (!function_exists('get_field')) {
 
 get_header(); ?>
 
-<main id="<?php echo (get_field('fullpage_enable')?'fullpage':'nofullpage')?>">
+<main id="<?php echo (get_field('fullpage_enable')?'fullpage':'nofullpage')?>" class="wrapper">
 
     <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-        <!-- article -->
-        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
             <?php the_content(); ?>
-
-
-        </article>
-        <!-- /article -->
 
     <?php endwhile; ?>
 
@@ -46,7 +39,7 @@ get_header(); ?>
     <?php endif; ?>
 
 
-</main>
+
 <?php get_footer(); ?>
 
 

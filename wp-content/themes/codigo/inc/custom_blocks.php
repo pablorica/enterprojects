@@ -17,7 +17,7 @@ if( function_exists('get_field') ) {
             //'render_template'   => get_stylesheet_directory()  . '/template-parts/block/content-testimonial.php',
             'category'          => 'codigo-blocks',
             'icon'              => 'admin-comments',
-            'mode'              => 'preview',
+            'mode'              => 'editor', //preview, editor
             'keywords'          => array( 'headline', 'comment'),
         );
 

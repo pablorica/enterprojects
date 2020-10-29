@@ -5,12 +5,9 @@
  footer.footer {
     font-size: 20px;
     line-height: 30px;
-    max-height: 450px;
+    max-height: 150px;
     color: $grey;
     background-color: $dark-grey;
-    .footer-flex {
-      max-height: 450px;
-    }
     .footer-media {
         list-style:none;
         padding:15px 0;
@@ -30,9 +27,9 @@
 }
 #nofullpage {
   footer.section {
-    height: 500px;
+    height: 150px;
     @media screen and (min-width: 768px) {
-      height: 450px;
+      height: 150px;
     }
   }
 
