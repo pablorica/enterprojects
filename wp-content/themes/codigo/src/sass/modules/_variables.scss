@@ -7,15 +7,20 @@
  * Fonts
  */
 
-$font-medium: Druk-Medium, sans-serif;
+$font-medium: ThreeSix10Pro-Medium, sans-serif;
 $font-bold: FranklinGothic-DemiCond, sans-serif;
+
 
 
 /**
  * Colors
  */
 
-$blue: #051FF6;
-$grey: #F0EEEB;
-$dark-grey: #70634A; //rgb(112,99,74)
+ $grey: #F0EEEB;
+ $font-smooth-grey: #ABA393; //rgb(171,163,147)
+ 
+ $font-grey-title: #70634A; //rgb(112,99,74)
+ $font-grey: #9B9281; //rgb(155,146,129)
+ 
+ $bg-green: #614F25; //rgb(97,79,37)
 

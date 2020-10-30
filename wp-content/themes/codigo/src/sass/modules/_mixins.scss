@@ -30,3 +30,22 @@
 @function rvh($q1,$q2) {
 	@return calc(var(--vh, 1vh) * #{$q1} - #{$q2});
 }
+
+
+/*
+ * SVG Icons
+ *
+Instead of
+background-image: url(../img/icon-arrow-right--white.png);
+use
+@include bg-arrow('%234A4A4A'); //%23 replaces #
+*/
+@mixin bg-cross($iconcolor) {
+	background-image: url('data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 475.1 336.4" style="enable-background:new 0 0 475.1 336.4;" xml:space="preserve"><rect x="233.1" y="12.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -40.3235 216.8505)" fill="#{$iconcolor}"  width="17" height="290"/><rect x="99.4" y="148.6" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -39.5034 218.8304)" fill="#{$iconcolor}" width="290" height="17"/></svg>');
+	background-repeat: no-repeat;
+}
+@mixin bg-cross_b($iconcolor) {
+	background-image: url('data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 15" style="enable-background:new 0 0 15 15;" xml:space="preserve"><line stroke="#{$iconcolor}" stroke-width="1.6667" fill="none" stroke-miterlimit="10" x1="12.8" y1="2.2" x2="2.2" y2="12.8"/><line stroke="#{$iconcolor}" stroke-width="1.6667" fill="none" stroke-miterlimit="10" x1="12.8" y1="12.8" x2="2.2" y2="2.2"/></svg>');
+	background-repeat: no-repeat;
+}
+

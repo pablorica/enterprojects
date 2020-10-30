@@ -236,14 +236,35 @@ if( function_exists('get_field') ) {
             if($block_images):
                 $htmlBody .= '
                 <div class="gblock__'.$body['classname'].'_body--carousel row">
-                    <div class="col-md-12 text-center '.($body['animation'] ? 'animate-children fade_in_up' : '').' slick-carousel" data-autoplay='.$carousel_autoplay.' data-arrows='.$carousel_arrows.' data-dots='.$carousel_navdots.' >';
+                    <div class="col-md-12 text-center '.($body['animation'] ? 'animate-children fade_in_up' : '').' carousel slick-carousel " data-autoplay='.$carousel_autoplay.' data-arrows='.$carousel_arrows.' data-dots='.$carousel_navdots.' >';
                 foreach($block_images as $gal_image ):
+                    if($image_link = get_field('image_link', $gal_image['id'])) {
+                        if($image_link == 'project') {
+                            $project_id = get_field('image_link_project', $gal_image['id']);
+                            $gal_image['title']     = get_the_title($project_id);
+                            $gal_image['location']  = get_field('project_location', $project_id); 
+                            $gal_image['permalink'] = get_permalink($project_id);
+                            $gal_image['target']    = '_self';
+                            //error_log('$image_project ' . print_r($image_project, true));
+                        }
+                        if($image_link == 'custom') {
+                            $image_cta = get_field('image_link_custom', $gal_image['id']);
+                            $gal_image['permalink'] = $image_cta['url'];
+                            $gal_image['target']    = $image_cta['target'];
+                            $gal_image['title']     = $gal_image['caption'];
+                            $gal_image['location']  = $image_cta['title']; 
+                        }
+                    }
+                    
                     $htmlBody.= '
                     <div>
-                        <figure>'.
-                            wp_get_attachment_image( $gal_image['id'], 'full').
-                            '<figcaption>'.esc_html($gal_image['caption']).'</figcaption>
-                        </figure>
+                        <div class="carousel-caption">
+                            <p>'.$gal_image['title'].'</p>
+                            <p>'.$gal_image['location'].'</p>
+                        </div>
+                        <a href="'.$gal_image['permalink'].'" target="'.$gal_image['target'].'">'.
+                            wp_get_attachment_image( $gal_image['id'], 'full').'
+                        </a>
                     </div>';
 
                 endforeach;
@@ -255,7 +276,7 @@ if( function_exists('get_field') ) {
             if($body['text']){
                 $htmlBody .= '
                 <div class="gblock__'.$body['classname'].'_body--content row">
-                    <div class="'.$inner_col_class.' mx-auto '.($body['animation'] ? 'animate-children fade_in_up' : '').'">
+                    <div class="section--col '.($body['animation'] ? 'animate-children fade_in_up' : '').'">
                     '.$body['text'].'
                     </div>
                 </div>';
@@ -264,18 +285,23 @@ if( function_exists('get_field') ) {
         elseif($body['type'] == 'quote') {
             $htmlBody .= '
             <div class="gblock__'.$body['classname'].'_body--content row">
-                <div class="'.$inner_col_class.' mx-auto '.($body['animation'] ? 'animate-children fade_in_up' : '').'">
+                <div class="section--col '.($body['animation'] ? 'animate-children fade_in_up' : '').'">
                     <blockquote>
                         <p>'.$body['quote'].'</p>
                     </blockquote>
                     <div class="author mt-auto">'.$body['author'].'</div>
                 </div>
             </div>';
+        } 
+        elseif($body['type'] == 'empty') {
+            $htmlBody .= '
+            <div class="gblock__'.$body['classname'].'_body--content row">
+            </div>';
         } elseif($body['type'] == 'cta') {
             $cta = $body['cta'];
             $htmlBody .= '
             <div class="gblock__'.$body['classname'].'_body--content row">
-                <div class="'.$inner_col_class.' mx-auto '.($body['animation'] ? 'animate-children fade_in_up' : '').'">
+                <div class="section--col '.($body['animation'] ? 'animate-children fade_in_up' : '').'">
                     <p>'.$body['cta_text'].'</p>
                     <a class="btn btn-primary btn-cta" role="button" href="'.$cta['url'].'" target="'.$cta['target'].'">'.$cta['title'].'</a>
                 </div>

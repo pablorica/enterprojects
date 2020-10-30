@@ -16,12 +16,7 @@ if (!function_exists('get_field')) {
 	exit; // Exit if ACF is not enabled
 }
 
-$section_id    =  (get_field('btwocolumns_section_id') ? 'id="'.get_field('btwocolumns_section_id').'"' : '');
-$section_class =  (get_field('btwocolumns_section_class') ? get_field('btwocolumns_section_class') : ''); 
-$block_id      =  (get_field('btwocolumns_id') ? 'id="'.get_field('btwocolumns_id').'"' : '');
-$block_class   =  (get_field('btwocolumns_class') ? get_field('btwocolumns_class') : '');
-
-
+$block_style = get_field('btwocolumns_style'); 
 $block_color = (get_field('btwocolumns_color') ? get_field('btwocolumns_color') : '#FFFFFF'); 
 
 
@@ -42,14 +37,14 @@ if(!$htmlRight) {
 }
 
 echo '
-<section '.$section_id.' class="section '.$section_class.'" data-color="'.$block_color.'">
-  <div class="container-fluid h-100 d-flex flex-column">
-    <div '.$block_id.' class="gblock gblock__btwocolumns my-auto text-center '.$block_class.'" >
+<section id="'.$block_style['section_id'].'" class="section '.$block_style['section_class'].'" data-color="'.$block_color.'">
+  <div id="'.$block_style['container_id'].'" class="container-fluid h-100 d-flex flex-column '.$block_style['container_class'].'">
+    <div id="'.$block_style['block_id'].'" class="gblock gblock__btwocolumns'.$block_style['block_class'].'" >
       <div class="row" >
-        <div class="col-md-6 my-auto py-3 text-center '.$block_class_left.'" >
+        <div class="col-md-6 '.$block_class_left.'" >
             '.$htmlLeft.'
         </div>
-        <div class="col-md-6 my-auto py-3 text-center '.$block_class_right.'" >
+        <div class="col-md-6 '.$block_class_right.'" >
             '.$htmlRight.'
         </div>
     </div>

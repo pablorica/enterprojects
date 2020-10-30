@@ -1,32 +1,130 @@
-.slick-dotted.slick-slider {
-    margin-bottom: 0;
-}
-
-.slick-arrow {
-    //position:relative;
-    &::before {
-        content:'';
-        position:absolute;
-        top:50%;
-        left:50%;
-        transform:translate(-50%,-50%);
-        width: 52px;
-        height: 52px;
-        background:transparent;
-        background-image: url('../../img/play_button.png');
-        background-position: center;
-        background-size: contain;
-        background-repeat:no-repeat;
-        border:none;
-        z-index:10;
+/* Carousel base class */
+.carousel {
+    //height: 100vh;
+    &:fullscreen {
+      background-color: $grey;
     }
-}
-.slick-prev {
-    &::before {
-        transform:translate(-50%,-50%) rotate(180deg);
+    img {
+       max-width: 80vw;
+       max-height: 80vh;
+       margin: auto;
     }
-}
-.slick-next {
-    right: 25px;
-    z-index: 10;
-}
+    &.fullsize {
+      img {
+        max-width: 150vw;
+        max-height: 150vh;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        position:static;
+        transform:none;
+      }
+    }
+    &.multiple {
+      img {
+       width: calc(100% - 80px);
+       height:auto;
+      }
+    }
+  
+    .slick-slide {
+      height: 100vh;
+      position: relative;
+      display: inline-flex;
+      vertical-align: middle;
+      float:none;
+    }
+  
+    .slick-arrow {
+      position:absolute;
+      top:0;
+      height:100%;
+      width:50%;
+      z-index:10;
+      background:transparent;
+      border:none;
+      &.slick-prev {
+        left:0;
+        &:hover {
+          cursor: url('../../img/icons/ENT_Arrow_Left.cur'),auto;
+        }
+      }
+      &.slick-next {
+        right:0;
+        &:hover {
+          cursor: url('../../img/icons/ENT_Arrow_Right.cur'),auto;
+        }
+      }
+    }
+  
+    .slick-zoom {
+      position:absolute;
+      bottom:40px;
+      left:40px;
+      z-index:20;
+      border:none;
+      width:25px;
+      height:25px;
+      background-image: url('../../img/icons/ENT_Zoom.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size:contain;
+    }
+  
+  
+  
+    &-caption {
+      position: absolute;
+      z-index: 2;
+      font-size: 18px;
+      line-height: 20px;
+      top:30px;
+      left:400px;
+      padding:0;
+      margin:0;
+      text-align:left;
+      height:10px;
+      p {
+        padding:0;
+        margin:0;
+      }
+    }
+  }
+  
+  
+  /* Since positioning the image, we need to help out the caption */
+  .slick-marker {
+    font-size: 18px;
+    line-height: 20px;
+    bottom:30px;
+    left:30px;
+    padding:0;
+    margin:-40px 0 0 0;
+    text-align:left;
+    height:10px;
+    p {
+      padding:0;
+      margin:0;
+    }
+  }
+  #carouselInfo {
+    margin:0;
+    position: absolute;
+    z-index: 3;
+    color:white;
+  }
+  
+  
+  /* Declare heights because of positioning of img element */
+  .carousel-item {
+    height: 32rem;
+    background-color: #777;
+  }
+  .carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 32rem;
+    object-fit: cover;
+  }

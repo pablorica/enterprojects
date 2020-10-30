@@ -16,12 +16,7 @@ if (!function_exists('get_field')) {
 	exit; // Exit if ACF is not enabled
 }
 
-$section_id    =  (get_field('bonecolumn_section_id') ? 'id="'.get_field('bonecolumn_section_id').'"' : '');
-$section_class =  (get_field('bonecolumn_section_class') ? get_field('bonecolumn_section_class') : ''); 
-$block_id      =  (get_field('bonecolumn_id') ? 'id="'.get_field('bonecolumn_id').'"' : '');
-$block_class   =  (get_field('bonecolumn_class') ? get_field('bonecolumn_class') : '');
-
-
+$block_style = get_field('bonecolumn_style'); 
 $block_color = (get_field('bonecolumn_color') ? get_field('bonecolumn_color') : '#FFFFFF'); 
 
 
@@ -35,9 +30,9 @@ if(!$htmlBody) {
 }
 
 echo '
-<section '.$section_id.' class="section '.$section_class.'" data-color="'.$block_color.'">
-  <div class="container-fluid h-100 d-flex flex-column">
-	<div '.$block_id.' class="gblock gblock__onecolumn py-3 my-auto text-center '.$block_class.'" >
+<section id="'.$block_style['section_id'].'" class="section '.$block_style['section_class'].'" data-color="'.$block_color.'">
+  <div id="'.$block_style['container_id'].'" class="container-fluid h-100 d-flex flex-column '.$block_style['container_class'].'">
+	<div id="'.$block_style['block_id'].'" class="gblock gblock__onecolumn '.$block_style['block_class'].'" >
 			'.$htmlBody.'
 	</div>
   </div>

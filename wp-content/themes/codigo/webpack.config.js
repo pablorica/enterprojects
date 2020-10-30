@@ -90,7 +90,7 @@ module.exports = {
                 ],
             },
             {
-                test: /\.(gif|png|jpe?g|svg)$/i,
+                test: /\.(gif|png|jpe?g|svg|cur)$/i,
                 use: [
                   {
                     loader: 'url-loader',

@@ -4,6 +4,15 @@
  * Declare fonts here
  */
 
+ @font-face {
+  font-family:'ThreeSix10Pro-Medium';
+  src:url('../../fonts/ThreeSix10Pro-090Medi.eot'); 
+  src:url('../../fonts/ThreeSix10Pro-090Medi.eot?#iefix') format('embedded-opentype'), 
+       url('../../fonts/ThreeSix10Pro-090Medi.woff2') format('woff2'), 
+       url('../../fonts/ThreeSix10Pro-090Medi.woff') format('woff'), 
+       url('../../fonts/ThreeSix10Pro-090Medi.ttf')  format('truetype'), 
+       url('../../fonts/ThreeSix10Pro-090Medi.svg') format('svg'); 
+}
 
 
 @font-face {

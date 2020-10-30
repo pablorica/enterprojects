@@ -2,35 +2,43 @@
  * partials/footer
  * ---
  */
- footer.footer {
-    font-size: 20px;
-    line-height: 30px;
-    max-height: 150px;
-    color: $grey;
-    background-color: $dark-grey;
-    .footer-media {
-        list-style:none;
-        padding:15px 0;
-        margin:0;
-        text-align: center;
-        li {
-          list-style:none;
-          padding:0;
-          margin:0 7px;
-          display:inline;
-        }
-        img {
-          width:40px;
-          height: 40px;
-        }
-    }
+ footer {
+	color: $font-grey;
+	background-color: white;
+	padding:30px !important;
+	max-height:170px !important;
+	h1,h2, h3 {
+		color: $font-grey-title;
+	}
+	a {
+		color: $font-grey;
+		&:hover {
+			color: $font-grey;
+		}
+	}
+	
 }
-#nofullpage {
-  footer.section {
-    height: 150px;
-    @media screen and (min-width: 768px) {
-      height: 150px;
-    }
-  }
+#fixed-arrow-up {
+	cursor: pointer;
+	position:fixed;
+	bottom:30px;
+	right: 30px;
+	width: 135px;
+	height: 40px;
+	z-index: 11;
+	small {
+		margin-top:12px;
+		opacity:0;
+		transition: 500ms ease-in-out;
+	}
+	img {
+		width: 40px;
+		margin-left:auto
+	}
+	&:hover {
+		small {
+			opacity:1
+		}
+	}
+}
 
-}
