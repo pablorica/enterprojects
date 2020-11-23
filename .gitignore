@@ -98,6 +98,9 @@ package-lock.json
 !CHANGELOG.md
 !composer.json
 
+#last database copy
+!db_enterprojects-2020_11_23.sql.gz
+
 # track favicon files, if they exist
 !android-chrome-*.png
 !apple-touch-icon*.png
