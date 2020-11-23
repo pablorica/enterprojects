@@ -11,6 +11,11 @@
 <a target="_blank" href="http://makeapullrequest.com" title="PRs Welcome"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"></a>
 
 
+
+## Staging version
+
+http://enterprojects.net/static/
+
 ## Download and Install
 
 Let's go!
@@ -28,8 +33,6 @@ Run development page on **localhost:8080**
 ```
 $ npm run dev
 ```
-
-## Build
 
 Build for production.
 

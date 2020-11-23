@@ -2,6 +2,12 @@
 A clean slate Wordpress theme template with Bootstrap(4), Sass, and a Webpack config with Babel.
 Based in https://github.com/tone4hook/wp-bootstrap4-sass
 
+
+
+## Staging version
+
+http://enterprojects.codigo.co.uk/
+
 ## Installation
 
 * Using command line(Terminal or Command Prompt) navigate to seadesign directory in your themes folder
