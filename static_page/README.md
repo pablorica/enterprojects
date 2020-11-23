@@ -17,7 +17,7 @@ Let's go!
 
 ```
 $ git clone https://github.com/pablorica/enterprojects.git
-$ cd enterprojects
+$ cd enterprojects/static_page
 $ yarn // or npm install
 ```
 
@@ -35,16 +35,6 @@ Build for production.
 
 ```
 $ npm run build
-```
-
-## Deploy: Currently no working
-
-Deploy to `gh-pages` branch on GitHub.
-
-**[DEMO](https://xxhomey19.github.io/bootstrap-webpack-jquery-boilerplate/)**
-
-```
-$ npm run deploy
 ```
 
 ## License
